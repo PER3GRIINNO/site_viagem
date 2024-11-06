@@ -1,0 +1,253 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url("background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #ffae00;
+  border-bottom: 2px solid #ffae00;
+  padding: 0px;
+}
+
+.logo-img {
+  width: 110px; /* Ajuste conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.logo i {
+  color: #ffae00;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  top: 0;
+  width: 100%;
+  color: white;
+  font-size: large;
+  overflow: hidden;
+  padding: 10px;
+}
+li {
+  display: flex;
+  float: inline-start;
+}
+
+li a {
+  padding: 15px;
+  display: block;
+  color: white;
+}
+
+li a:hover {
+  color: #ffae00;
+  border-bottom: 2px solid #ffae00;
+}
+
+.btn {
+  padding: 10px 30px 10px 30px;
+  color: black;
+  background: transparent;
+  background-color: #ffae00;
+  border-radius: 10px;
+  font-size: large;
+  border: none;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  border: 2px solid #ffae00;
+  color: white;
+}
+
+.desc {
+  margin: 150px 100px;
+  color: white;
+}
+.des h2 {
+  font-size: 30px;
+}
+.desc h1 {
+  font-size: 45px;
+  margin-top: 10px;
+}
+.desc p {
+  margin-top: 10px;
+}
+
+.inputbox {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  background-color: white;
+  width: 50%;
+  padding: 10px;
+  border-radius: 10px;
+}
+.inputbox input {
+  padding-left: 15px;
+  width: 100%;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+}
+.inputbox .inputbtn {
+  padding: 10px 20px 10px 20px;
+  color: black;
+  background-color: #ffae00;
+  border-radius: 10px;
+  font-size: large;
+  border: none;
+}
+
+div.font i {
+  margin: 8px;
+  margin-top: 20px;
+  border: 2px solid #ffae00;
+  padding: 10px;
+  border-radius: 50px;
+  transition: 0.5s ease;
+}
+
+div.font i:hover {
+  background-color: #ffae00;
+  box-shadow: 0px 0px 20px #ffae00;
+  transform: translateY(-10px);
+}
+
+.animation {
+  opacity: 0;
+  transform: translateX(60px);
+  animation: head 0.5s linear forwards;
+}
+
+@keyframes head {
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.animation1 {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: head 0.5s linear forwards;
+}
+
+@keyframes head {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.desc.animation1 {
+  animation-delay: 1s;
+}
+
+.inputbox.animation1 {
+  animation-delay: 1.5s;
+}
+
+.font.animation1 {
+  animation-delay: 2s;
+}
+
+/* Responsividade para telas menores que 768px (tablets e smartphones) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-img {
+    width: 80px; /* Reduz o tamanho da logo */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .btn {
+    margin-top: 10px;
+    font-size: medium;
+  }
+
+  .desc {
+    margin: 80px 20px; /* Reduz a margem nas laterais */
+    text-align: center;
+  }
+
+  .desc h1 {
+    font-size: 35px; /* Diminui o tamanho do título */
+  }
+
+  .desc h2 {
+    font-size: 24px; /* Diminui o subtítulo */
+  }
+
+  .inputbox {
+    flex-direction: column;
+    width: 90%; /* Expande a caixa de pesquisa para quase a largura total */
+  }
+
+  .inputbox input,
+  .inputbox .inputbtn {
+    width: 100%;
+    margin-top: 5px; /* Adiciona um espaço entre o campo de input e o botão */
+    font-size: 16px;
+  }
+
+  .font {
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
+/* Responsividade para telas menores que 480px (smartphones menores) */
+@media (max-width: 480px) {
+  .logo-img {
+    width: 60px; /* Reduz ainda mais o tamanho da logo */
+  }
+
+  .desc h1 {
+    font-size: 28px; /* Diminui o título principal para caber em telas pequenas */
+  }
+
+  .desc h2 {
+    font-size: 20px; /* Diminui o subtítulo */
+  }
+
+  .inputbox {
+    width: 100%; /* Expande para a largura total da tela */
+    padding: 5px; /* Reduz o padding */
+  }
+
+  .inputbox input {
+    font-size: 14px; /* Reduz o tamanho da fonte do input */
+  }
+
+  .btn {
+    padding: 8px 20px; /* Ajusta o padding do botão para caber melhor */
+  }
+}
